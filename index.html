@@ -50,11 +50,7 @@ var analyzeFile = function (file) {
         w.postMessage(data);
     };
 
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        img.src = e.target.result;
-    };
-    reader.readAsDataURL(file);
+    img.src = window.URL.createObjectURL(file);
 };
 </script>
 
